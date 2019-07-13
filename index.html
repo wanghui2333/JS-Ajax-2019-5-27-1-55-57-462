@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 1. 创建连接 
+        var ajax = null;
+        ajax = new XMLHttpRequest()
+        // 2. 连接服务器 
+        ajax.open('get', url, true)
+        // 3. 发送请求 
+        ajax.send(null);
+        // 4. 接受请求 
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState == 4) {
+                if (ajax.status == 200) {
+                    success(ajax.responseText);
+                } else {
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
